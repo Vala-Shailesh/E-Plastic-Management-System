@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="../CSS/stylesheet.css">
+     <link rel="stylesheet" href="../CSS/mediaQuery.css">
+     <link rel="stylesheet" href="../CSS/commanStyle.css">
+     <link rel="stylesheet" href="../CSS/profile.css">
+     <link rel="stylesheet" href="../CSS/content.css">
+     <link rel="stylesheet" href="../CSS/navbar.css">
+     
+     <!-- javasecipt -->
+     <script src="../JavaScript/DynamicJS/userControl.js" defer></script>
+
+     <title>  E-Plastic Managment System  </title>
+</head>
+<body>
+     <input type="text" id="control-text" value="{{role}}" style="display: none;">
+
+     {{>navbar}}
+     {{!-- <div class="header">
+          <nav class="navbar">
+               <div class="logo">
+                    EPMS
+               </div>
+               <ul>
+                    <li> <a href="./home.html"> Home </a></li>
+                    <li> <a href="./activity.html"> Activity </a></li>
+                    <li class="drop-down-menu user">
+                         Services
+                         <div class="drop-down-menu-items">
+                              <a href="./Customer/addService.html"> Add Service </a>
+                              <a href="./Customer/currentService.html"> Current Service </a>
+                              <a href="./Customer/oldService.html"> Old Service </a>
+                         </div>
+                    </li>
+                    <li class="drop-down-menu worker">
+                         Services
+                         <div class="drop-down-menu-items">
+                              <a href="./Customer/addService.html"> Add Service </a>
+                              <a href="./Customer/currentService.html"> Current Service </a>
+                              <a href="./Customer/oldService.html"> Old Service </a>
+                         </div>
+                    </li>
+                    <!-- <li> <a href="#"> Service </a></li> -->
+                    <li> <a href="./content.html"> Contect </a></li>
+                    <li class=""> <a href="./profile.html"> Profile </a></li>
+               </ul>
+          </nav>
+     </div> --}}
+     <div class="main t-m-3em">
+          <div class="content container">
+               <h1 class=""> Help Center </h1>
+               <p class="paragraph f-s-larg"> Your team are very supportive for any user or customer that want interset to plastic west management. We can  give response to every request as soon as possible also restriction are also their in our team. If any user or customer are not follow our teams & condition than our team are not able to help your request. Becuase our team are work with our company regulation and role. <br/> <br/>
+               <p class="l-m-2em f-s-larg">  1. A request are aceepted regrading plastic collection cancelled only if customer are cancelled it within 24 hour's  </p><br/>
+               <p class="l-m-2em f-s-larg"> 2. Any customer are interest to visit our work place and met our team than it also sent a request about that with mention their reson in detail field.  </p>
+              
+               </p>
+               <h1 class="t-m-2em"> Term's & Condition </h1>
+               <p class="paragraph f-s-larg"> Please refer to the Policy for information on how E-Plastic Management System collects, uses, and protects your personal information.</p>
+               <h1 class="t-m-2em"> Requset to EMPS </h1>
+               <div class="req-box b-m-2em t-m-3em">
+                    <div class="req-box-item w-50">
+                         <form action="/content" method="post">
+                              <h1 class="t-m-1em"> Requset Form </h1>
+                              <div class="t-m-2em">
+                                   <label for="role"> Role as : </label>
+                                   <input type="radio" name="role" vlaue="customer" id="" class="l-m-1em" value="customer"> Customer
+                                   <input type="radio" name="role" vlaue="worker" id="" class="l-m-1em" value="worker"> Worker
+                                   <input type="radio" name="role" vlaue="industry" id="" class="l-m-1em" value="industry"> Industry
+                              </div>
+                              <div class="">
+                                   <label for="reqUserName"> Full Name : </label>
+                                   <input type="text" class="w-50" name="reqUserName">
+                              </div>
+                              <div class="">
+                                   <label for="reqType"> Requset for : </label>
+                                   <select id=""  class="select" name="reqType">
+                                        <div class="select-item">     
+                                             <option value="none"> --- Select problem type --- </option>
+                                             <option value="aboutCurAct"> About current activity </option>
+                                             <option value="aboutOldAct"> About old activity </option>
+                                             <option value="aboutCanAct"> About cancelled activity </option>
+                                             <option value="other"> other </option>
+                                        </div>
+                                   </select>
+                              </div>
+                              <div class="">
+                                   <label for="serviceId"> Service Id : </label>
+                                   <input type="text" class="w-50" placeholder="" name="serviceId">
+                              </div>
+                              <div class="">
+                                   <label for="problemTitle"> Problem title : </label>
+                                   <input type="text" class="w-50" placeholder="" name="problemTitle">
+                              </div>
+                              <div class="">
+                                   <label for="problemDetail"> Problem brief : </label>
+                                   <input type="text" class="w-50" placeholder="" name="problemDetail">
+                              </div>
+                              <div class="w-100 flex-center t-m-3em b-m-2em">
+                                   <button type="submit" class="btn btn-sm r-m-2em"> Send Request </button>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+     {{> footer}}
+     {{!-- <footer>
+          <h3> EPMS website &copy;copyright rule are apply.</h3>
+          <div class="box footer-box">
+               <div class="footer-items"> greekforgreek.con  </div>
+               <div class="footer-items"> w3school.com </div>
+               <div class="footer-items"> w3school.com </div>
+               <div class="footer-items"> w3school.com </div>
+          </div>
+     </footer> --}}
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+     
+     <!-- stylesheet -->
+    <link rel="stylesheet" href="../CSS/stylesheet.css">
+     <link rel="stylesheet" href="../CSS/mediaQuery.css">
+     <link rel="stylesheet" href="../CSS/commanStyle.css">
+     <link rel="stylesheet" href="../CSS/activity.css">
+     <link rel="stylesheet" href="../CSS/navbar.css">
+
+     <!-- Scriptig -->
+     <!-- <script src="../JavaScript/header.js" defer></script> -->
+     <script src="../JavaScript/DynamicJS/userControl.js" defer></script>
+     <script src="../JavaScript/form.js" defer></script>
+     <script src="../JavaScript/popUpBox.js" defer></script>
+
+     <title> E-Plastic Managment System </title>
+</head>
+<body>
+     <input type="text" id="control-text" value="{{role}}" style="display: none;">
+
+     {{>navbar}}
+     <div class="main">
+         <div class="">
+               <h1 > About Project </h1>
+               <div class="flex-space-evenly flex-wrap">
+                    <div class="activity-img">
+                         <img src="../Images/epms.png" alt="" class="">
+                    </div>
+                    <p class="paragraph activity-content f-s-2em">E-Plastic management system is an website project in the project we are used to recycle the waste plastic. It is very helpful in order to overcome the wastage issues of the plastics. The user can able to view the list of plastic categories based on their shapes they can choose any of it. The admin used to maintain all the records Admin also can view the users details add details of product and can also able to update the changes in the details. The management and recycling of E plastic waste is rapidly growing as it is a valuable resource of industries and it is very substances and with low recycling rate.The massive consumption of a wide range plastic products has generated a huge amount of plastic waste. There is a need to provide awareness of their uses and routine management as a part of our lifestyle. Nowadays,  plastics are increasingly being used in our daily life activities, including the packaging in different food and  brewing companies, cosmetics, pharmaceutical, and other production sectors. </p>
+               </div>
+               <div class="flex-space-evenly flex-wrap-reverse">
+                    <div class="activity-img activity-img-larg">
+                         <img src="../Images/Plastic-Waste-Management-Rules.jpg" alt="" class="">
+                    </div>
+                    <p class="paragraph activity-content">Plastic pollution has become one of the major environmental issues these days. Plastic is manufacturing in a variety of modes, which is just increasing the numbers every day. The major counts come from single-use plastic products and are challenging our ability to deal with these numbers. Plastic pollution can be seen throughout the Earth’s surface, especially in the Asian and African countries. Plastic dumps are not only destroying the land and air, but it is also spoiling marine life. They are composed of highly toxic material that causes harmful effects for both humans and animals. Plastic denotes the durability; hence it is a non-biodegradable product. This is the reason; plastic takes more than 100 years to decompose. It is essential to understand the problems caused by plastics so that we can start the process from its root cause. </p>
+               </div>
+               <div class="activity-img activity-img-60 box-shadow-none">
+                    <img src="../Images/Plastic-cycle-removebg-preview.png" alt="" class="">
+               </div>
+               <div class="activity-content activity-content-100">
+                    <p class="paragraph"> Plastic recycling is a process of recovery of plastic waste and reprocessing them to create products that are functional and useful. The goal of plastic recycling is to eliminate plastic pollution by taking out plastics from the ocean and landfills as well as conserve resources in the process. What’s mind-blowing is that recycling plastic requires 88% less energy than manufacturing plastics. Furthermore, recycling a single plastic bottle can provide a 100W bulb, enough power to last for an hour. </p>
+               </div>
+               <div class="t-m-3em w-100">
+                    <h1> Objective : </h1>
+                    <div class="l-m-6em f-s-larg margin-inline">
+                         <p class="m-1em margin-inline"> The objective of this project is to manage/process recycling process online..</p> 
+                         <p class="m-1em margin-inline">The request for recycling placed by the users should be fulfilled by the admin.<p> 
+                         <p class="m-1em margin-inline">  The user can do online shopping for recycled products. </p> 
+                         <p class="m-1em margin-inline"> The order goes through various payment phases till it finally reaches the customer.</p> 
+                         <p class="m-1em margin-inline"> At any point of time customer, himself can track the status of the order online with thereference number he got while placing the order.  </p> 
+                    </div>
+               </div>
+         </div>
+     </div>
+     {{> footer}}
+</body>

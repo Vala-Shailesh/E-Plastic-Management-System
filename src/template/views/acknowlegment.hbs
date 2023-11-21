@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="../CSS/stylesheet.css">
+     <link rel="stylesheet" href="../CSS/mediaQuery.css">
+     <link rel="stylesheet" href="../CSS/commanStyle.css">
+     <link rel="stylesheet" href="../CSS/navbar.css">
+     <link rel="stylesheet" href="../CSS/activity.css">
+     <link rel="stylesheet" href="../CSS/form.css">
+
+     <!-- javascripting  -->
+     {{!-- <script src="../JavaScript/DynamicJS/userControl.js" defer></script> --}}
+     <script src="../JavaScript/service.js" defer></script>
+
+         <!-- <script src="../JavaScript/header.js" defer></script> -->
+     <script src="../JavaScript/form.js" defer></script>
+     <script src="../JavaScript/popUpBox.js" defer></script>
+     <script src="../JavaScript/randomCodeGenar.js" defer></script>
+     <script src="../JavaScript/loginValidation.js" defer></script>
+     <script src="../JavaScript/registrationValidation.js" defer></script>
+
+     <title> E-Plastic Managment System </title>
+</head>
+
+<body>
+      <div class="pop-up-form flex-center display">
+          <div class="pop-up-close-btn">
+               <ion-icon name="close-outline" class="middle-icon-size text-center"></ion-icon>
+          </div>
+          <div class="content">
+               <h1 class="text-center t-m-2em"> EPMS </h1>
+               <img src="../Images/Favicon/epms.png" alt="" class="t-m-1em">
+               {{!-- <span class="t-m-1-5em f-s-larg"> EMPS team is a one type of brige betweet people and industry connect for plastic west control and also team are work for devlope awareness in normal people mind. </span> --}}
+               <div class="f-s-larg pop-up-box-paragraph"> EMPS team is a one type of brige betweet people and industry connect for plastic west control and also team are work for devlope awareness in normal people mind. </div>
+          </div>
+          <form action="/login" method="post" class="pop-up-login-form">
+               <h1> Login </h1>
+               <label for="user-role-login-pop-up">
+                    <select name="role" id="user-role-login-pop-up" required>
+                         <option value="none"> Select a role </option>
+                         {{!-- <option value="admin"> Admin </option> --}}
+                         <option value="customer"> Customer </option>
+                         <option value="worker"> Worker </option>
+                         <option value="industry"> Industry </option>
+                    </select>
+               </label>
+               <label for="loginUserName">
+                    <input type="text" name="loginUserName" id="popUp-login-user-name" value="" placeholder="Enter a user name.." required>
+               </label>
+               <label for="loginPassword">
+                    <input type="password" name="loginPassword" id="popUp-login-password" placeholder="Enter a password.." required>
+               </label>
+               <label for="login-code" class="capcha-code-box">
+                    <input type="text" name="login-code" id="popUp-login-code" placeholder="Enter a code.." class="user-capcha" required>
+                    <ion-icon name="refresh-outline" class="refrence-capcha-code"></ion-icon>
+                    <span class="capcha-code"> </span>
+               </label>
+               <label for="">
+                    <span style="display: none; color : red;" class="invalidCode"> Invalid Code ! </span>
+               </label>
+               <label for="" class="display-none" style="display: {{display}}; color: red;">
+                    <span class="text-center w-100"> invalid password !</span>
+               </label>
+               <button type="submit" class="btn horizataly-center login-btn t-m-1-5em"> Login </button>
+               <label for="forgetPass" class="flex-center t-m-2em">
+                    <span> <a href="/forgetPassword" class="link-hover-effect"> Forget Password ! </a></span>
+               </label>
+               <label for="icon" class="flex-center icon-box">
+                    <div class="icon">
+                         <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+               </label>
+               <label for="option" class="flex-center t-m-2em">
+                    <span> You have account ? <a href="#" id="pop-up-on-login-to-registration" class="link-hover-effect"> Registration Now ! </a></span>
+               </label>
+          </form>
+          <form action="/register" method="post" class="pop-up-registration-form">
+               <h1> Registration </h1>
+               <label for="user-role-registration-pop-up">
+                    <select name="role" id="user-role-registration-pop-up" required>
+                         <option value="none" > Select a role </option>
+                         {{!-- <option value="admin"> Admin </option> --}}
+                         <option value="customer"> Customer </option>
+                         <option value="worker"> Worker </option>
+                         <option value="industry"> Industry </option>
+                    </select>
+               </label>
+               <label for="regisUserName">
+                    <input type="text" name="regisUserName" id="popUp-regis-user-name" placeholder="Enter a user name.." required>
+               </label>
+               <label for="regisUserEmail">
+                    <input type="email" name="regisUserEmail" id="popUp-regis-user-email" placeholder="Enter a user email.." required>
+               </label>
+               <label for="regisUserConnectNo">
+                    <input type="number" name="regisUserConnectNo" minlength="10" maxlength="10" id="popUp-regis-user-email" placeholder="Enter a user number.." required>
+               </label>
+               <label for="regisPassword">
+                    <input type="password" name="regisPassword" id="popUp-regis-password" placeholder="Enter a password.." required>
+               </label>
+               <label for="regisconfirmPassword">
+                    <input type="password" name="regisConfirmPassword" id="popUp-regis--re-password" placeholder="Enter a re-password.." required>
+               </label>
+               <label for="agree">
+                    <input type="checkbox" name="agree" id="popUp-agree" required>
+                    <span> Agree with term's and condition's ! </span>
+               </label>
+               <label for="" class="display-none" style="display: {{res.display}}; color: red;">
+                    <span class="text-center w-100"> Data are not righty filled ! </span>
+               </label>
+               <button type="submit" class="btn vertical-center regis-btn"> Register </button>
+               <label for="option" class="flex-center">
+                    <span> If already have account ! <a href="#" id="pop-up-on-registration-to-login" class="link-hover-effect sm-effect"> Login Now ! </a></span>
+               </label>
+               <label for="icon" class="flex-center icon-box">
+                    <div class="icon">
+                         <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+               </label>
+          </form>
+     </div>
+     <input type="text" id="control-text" value="{{role}}" style="display: none;">
+     <div class="header">
+               <nav class="navbar">
+                    <div class="logo">
+                              EPMS
+                    </div>
+                    <ul>
+                         <li> <a href="../"> Home </a></li>
+                         <li> <a href="../index/activity"> Activity </a></li>
+                         {{!-- <li> <a href="../service"> Service </a></li> --}}
+                         <!-- <li class="drop-down-menu">
+                              Services
+                              <div class="drop-down-menu-items">
+                                   <a href="#"> Add Service </a>
+                                   <a href="./currentService.html"> Current Service </a>
+                                        <a href="#"> Old Service </a>
+                              </div>
+                         </li> -->
+                         <!-- <li> <a href="#"> Service </a></li> -->
+                         {{!-- <li> <a href="../content"> Contect </a></li> --}}
+                         <li class="pop-up-open-btn"> Login </li>
+                    </ul>
+               </nav>
+          </div>
+     <div class="main">
+         <div class="">
+               <h1 > About Project </h1>
+               <div class="flex-space-evenly flex-wrap">
+                    <div class="activity-img">
+                         <img src="../Images/epms.png" alt="" class="">
+                    </div>
+                    <p class="paragraph activity-content f-s-2em">E-Plastic management system is an website project in the project we are used to recycle the waste plastic. It is very helpful in order to overcome the wastage issues of the plastics. The user can able to view the list of plastic categories based on their shapes they can choose any of it. The admin used to maintain all the records Admin also can view the users details add details of product and can also able to update the changes in the details. The management and recycling of E plastic waste is rapidly growing as it is a valuable resource of industries and it is very substances and with low recycling rate.The massive consumption of a wide range plastic products has generated a huge amount of plastic waste. There is a need to provide awareness of their uses and routine management as a part of our lifestyle. Nowadays,  plastics are increasingly being used in our daily life activities, including the packaging in different food and  brewing companies, cosmetics, pharmaceutical, and other production sectors. </p>
+               </div>
+               <div class="flex-space-evenly flex-wrap-reverse">
+                    <div class="activity-img activity-img-larg">
+                         <img src="../Images/Plastic-recycling.jpg" alt="About plastic west" class="">
+                    </div>
+                    <p class="paragraph activity-content">Plastic pollution has become one of the major environmental issues these days. Plastic is manufacturing in a variety of modes, which is just increasing the numbers every day. The major counts come from single-use plastic products and are challenging our ability to deal with these numbers. Plastic pollution can be seen throughout the Earth’s surface, especially in the Asian and African countries. Plastic dumps are not only destroying the land and air, but it is also spoiling marine life. They are composed of highly toxic material that causes harmful effects for both humans and animals. Plastic denotes the durability; hence it is a non-biodegradable product. This is the reason; plastic takes more than 100 years to decompose. It is essential to understand the problems caused by plastics so that we can start the process from its root cause. </p>
+               </div>
+               <div class="activity-img activity-img-60 box-shadow-none">
+                    <img src="../Images/Plastic-cycle-removebg-preview.png" alt="" class="">
+               </div>
+               <div class="activity-content activity-content-100">
+                    <p class="paragraph"> Plastic recycling is a process of recovery of plastic waste and reprocessing them to create products that are functional and useful. The goal of plastic recycling is to eliminate plastic pollution by taking out plastics from the ocean and landfills as well as conserve resources in the process. What’s mind-blowing is that recycling plastic requires 88% less energy than manufacturing plastics. Furthermore, recycling a single plastic bottle can provide a 100W bulb, enough power to last for an hour. </p>
+               </div>
+               <div class="t-m-3em w-100">
+                    <h1> Objective : </h1>
+                    <div class="l-m-6em f-s-larg margin-inline">
+                         <p class="m-1em margin-inline"> 👉 The objective of this project is to manage/process recycling process online..</p> 
+                         <p class="m-1em margin-inline"> 👉 The request for recycling placed by the users should be fulfilled by the admin.<p> 
+                         <p class="m-1em margin-inline"> 👉  The user can do online shopping for recycled products. </p> 
+                         <p class="m-1em margin-inline"> 👉 The order goes through various payment phases till it finally reaches the customer.</p> 
+                         <p class="m-1em margin-inline"> 👉 At any point of time customer, himself can track the status of the order online with thereference number he got while placing the order.  </p> 
+                    </div>
+               </div>
+         </div>
+     </div>
+     {{> footer}}
+     {{!-- <footer>
+          <h3> EPMS website &copy;copyright rule are apply.</h3>
+          <div class="box footer-box">
+               <div class="footer-items"> greekforgreek.con  </div>
+               <!-- <div class="border"></div> -->
+               <div class="footer-items"> w3school.com </div>
+               <div class="footer-items"> w3school.com </div>
+               <div class="footer-items"> w3school.com </div>
+          </div>
+     </footer> --}}
+</body>
+
+</html>

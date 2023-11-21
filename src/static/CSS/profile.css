@@ -1,0 +1,270 @@
+:root{
+     --shadowClr : rgb(230, 247, 253);
+     /* --shadowClr : #fff; */
+}
+.profile-container{
+     width: 90%;
+     height: max-content;
+     /* background-color: ; */
+     backdrop-filter: blur(1px);
+     border: 1px solid transparent;
+     border-radius: 1em;
+     margin-inline: auto;
+     margin-top: 10em;
+     /* box-shadow: 0px 0px 10px 2px #00000036; */
+     background-color: #ffffffc4;
+     position: relative;
+}
+.profile-img-border{
+     width: 345px;
+     height: 345px;
+     /* border-bottom: 5px solid black; */
+     border-radius: 50%;
+     position: absolute;
+     left: 50%;
+     top: -9em;
+     transform: translateX(-50%);
+}
+.profile-img-border::after{
+     content: "";
+     width: 22em;
+     height: 22em;
+     background-color: var(--shadowClr);
+     position: absolute;
+     top: 0%;
+     left: -1%;
+     border-bottom-left-radius: 100%;
+     border-bottom-right-radius: 100%;
+     z-index: -1;
+     /* border: none;  */
+     /* box-shadow: 0px 1px 0px 0px black, 5 px 0px 0px 0px var(--shadowClr); */
+     /* border-top-right-radius: 100%; */
+     /* box-shadow: 6px -5px 1px 1px rgb(228, 247, 255), 7px -9px 1px 1px rgb(228, 247, 255); */
+}
+.profile-box-effect::before{
+     content: "";
+     width: 25px;
+     height: 30px;
+     position: absolute;
+     left: -8.4%;
+     top: 41.5%;
+     background-color: transparent;
+     border: none;
+     border-top-right-radius: 100%;
+     box-shadow: 5px 0px 0px 0px var(--shadowClr),3px -10px 0px 0px var(--shadowClr), 4px -15px 0px 0px rgba(231, 247, 252, 0.671);
+     z-index: -1;
+     
+}
+.profile-box-effect::after{
+     content: "";
+     width: 25px;
+     height: 30px;
+     position: absolute;
+     right: -8.4%;
+     top: 41.5%;
+     background-color: transparent;
+     border: none;
+     border-top-left-radius: 100%;
+     box-shadow: -5px 0px 0px 0px var(--shadowClr),-3px -10px 0px 0px var(--shadowClr), -4px -15px 0px 0px rgba(231, 247, 252, 0.671);
+     z-index: -1;
+
+}
+.profile-img{
+     width: 300px;
+     height: 300px;
+     /* border: none; */
+     /* background-color: yellow; */
+     border-radius: 50%;
+     overflow: hidden;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     background-color: #fff;
+     outline-offset: 0px;
+     /* outline: 20px solid #ffffff; */
+     box-shadow: 0px 0px 10px 2px #00000036;
+     z-index: 1;
+}
+.profile-img::before{
+     content: "";
+     position: absolute;
+     width: 300px;
+     height: 300px;
+     border-radius: 50%;
+     left: -60%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     background-color: #00000036;
+     z-index: 3;
+}
+.profile-img img{
+     width: 512px;
+     position: relative;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     zoom: 1.1;
+}
+.profile-img div{
+     left: 62%;
+     cursor: pointer;
+     visibility: hidden;
+     z-index: 4;
+}
+.profile-img:hover img{
+     opacity: .5;
+     z-index: 3;
+     cursor: pointer;
+}
+.profile-img:hover div{
+     visibility: visible;
+     opacity: 1;
+}
+.profile-img:hover::before{
+     left: 50%;
+     transition: left 1s ease;
+}
+
+
+/* proflie btn's styling */
+.profile-btn-layout{
+     width: 100%;
+     /* border: 1px solid black; */
+     position: relative;
+     top: 3em;    
+     /* right: -970px; */
+     /* padding-inline: 7%; */
+}
+.profile-btn-layout button{
+     margin-inline: 1.5em;
+}
+
+/* profile details layout */
+.profile-box{
+     width: 90%;
+     height: 1000px;
+     height: max-content;
+     /* margin-inline: auto; */
+     margin: 7em auto 2em;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-wrap: wrap;
+     /* border: 1px solid black; */
+     gap: 2em;
+}
+.profile-box-item{
+     width: 100%;
+     height: max-content;
+     /* height: 300px; */
+     /* border: 1px solid red; */
+     padding: 1.2em;
+     border-radius: .6em;
+     background-color: #fff;
+     box-shadow: 0 0 2px 2px #00000025;
+}
+
+/* profile styling for form (idea) */
+form{
+     width: 90%;
+     height: max-content;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin-inline: auto;
+     font-size: 1.2em;
+     /* border: 1px solid red; */
+}
+form div{
+     width: 100%;
+     margin-inline: auto;
+     margin: .6em auto;
+     /* backdrop-filter: ; */
+     /* border: 1px solid green; */
+}
+form div label{
+     width: 170px;
+     display: inline-block;
+     /* border: 1px solid yellow; */
+     /* margin-right: 3em; */
+}
+form div div{
+     max-width: 200px;
+     display: inline-block;
+}
+form div input[type="text"], form div input[type="email"],
+form div input[type="number"], form div textarea,
+form div select{
+     width: calc(100% - 175px);
+     border: none;
+     outline: none;
+     border-bottom: .1px solid black;
+     padding: 0 .5em .1em .2em;
+     background-color: transparent;
+     cursor: pointer;
+}
+textarea, input[type="number"]{
+     /* appearance: none; */
+}
+select::backdrop{
+     color: red;
+     border: 1px solid red;
+}
+select option{
+     color: black;
+     /* background-color: rgb(184, 231, 250); */
+     padding: 1rem;
+}
+select option:first-child{
+     background-color: #777;
+}
+/* some option in dynamically */
+.select-item{
+     display: none;
+}
+.select:hover .select-item{
+      display: inline;
+}
+input[type="radio"]{
+     cursor: pointer;
+}
+
+label.fit-content{
+     width: max-content;
+}
+
+/* user identity box & left side container styling */
+.user-identity-box{
+     width: 90%;
+     top: 50px;
+     left: 0;
+     /* min-width: 50%; */
+     /* border: 1px solid black; */
+     /* position: relative; */
+}
+.user-identity-box-item{
+     width: 15em;
+     height: 15em;
+     border: none;
+     border-radius: 50%;
+     background-color: #fff;
+     box-shadow:  0 0 4px 2px #00000036;
+}
+
+/* rewoed's img */
+.reword-img{
+     width: 20em;
+     height: fit-content;
+     /* border: 1px solid black; */
+     overflow: hidden;
+}
+.reword-img img{
+     width: 100%;
+}
+
+/* some specific class */
+.max-content-width{
+     width: max-content;
+}

@@ -1,0 +1,34 @@
+@media screen and (max-width: 770px) {
+     body{
+          width: 95vw;
+          margin-inline: 2.5vw;
+     }
+     .header{
+          width: 95vw;
+     }    
+     .navbar, .scroll_images{
+          width: 95%;
+          font-size: 1em;
+          margin-inline: auto;
+     } 
+     .img{
+          min-width: 100%;
+          margin-inline: auto;
+     }
+     .img img{
+          min-width: 100%;
+     }
+     .scroll_images_container::after{
+          content: "";
+          max-width: 0;
+          max-height: 0;
+     }
+}
+
+@media screen and (max-width: 425px) {
+     
+     .info{
+          margin-top: 30vw;
+          margin-left: 200px
+     }
+}

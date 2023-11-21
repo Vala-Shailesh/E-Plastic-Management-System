@@ -1,0 +1,17 @@
+.req-box{
+     width: 45%;
+     min-width: 400px;
+     margin-inline: auto;
+     background-color: #ffffffb9;
+     border-radius: 1em;
+     user-select: none;
+     box-shadow: 2px 2px 4px 2px #00000015, -2px -2px 4px 2px #00000015;
+}
+.req-box-item{
+     width: 90%;
+     min-width: 400px;
+     margin-inline: auto;
+}
+.req-box-item form div label{
+     width: 130px;
+}

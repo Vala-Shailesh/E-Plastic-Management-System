@@ -1,0 +1,178 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     min-width: 7px;
+     width: 100%;
+     min-height: 100vh;
+     font-size: 16px;
+     /* overflow-x: hidden; */
+     background-color: rgba(208, 237, 248, 0.486);
+     /* background-image: url(../Images/epms-removebg-preview.png); */
+     background-repeat: no-repeat;
+     background-size: 600px;
+     background-position: center;
+     background-attachment: fixed;
+     /* position: relative; */
+     z-index: -1;
+}
+
+
+/* main content styling */
+.main{
+     width: 90vw;
+     height: max-content;
+     margin-inline: auto;
+     min-width: 800px;
+     margin-top: 2em;
+     margin-bottom: 5em;
+}
+
+/* box flipcard effect */
+.flipcard{
+     min-width: 300px;
+     width: 300px;
+     height: 270px;
+     display: block;
+     margin: 1em 4em;
+     border-radius: 1em;
+     box-shadow: 1px 1px 5px 2px #00000033;
+     background-color: #ffffffaf;
+     position: relative;
+     transform-style: preserve-3d;
+     transition: all 2s ease;
+     /* overflow: hidden; */
+}
+.font-side{
+     color: black;
+     backface-visibility: hidden;
+}
+.back-side{
+     height: 100%;
+     /* background-color: green; */
+     backface-visibility: hidden;
+     transform: rotateY(180deg);
+}
+.flipcard:hover{
+     transform: rotateY(180deg);
+}
+.flipcard-text{
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.4rem;
+     padding: 1.2rem;
+}
+.flipcard-text.font-side{
+     font-size: 2rem;
+}
+.flipcard-text.back-side{
+     font-size: 1.2rem;
+     text-align: justify;
+     text-indent: 1.8rem;
+}
+.flipcard:nth-child(1) .font-side{
+     border-radius: inherit;
+     background-image: url(../Images/Recycle.jpg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+}
+.flipcard:nth-child(2) .font-side{
+     border-radius: inherit;
+     background-image: url(../Images/Reduse.jpg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+}
+.flipcard:nth-child(3) .font-side{
+     border-radius: inherit;
+     background-image: url(../Images/Reuse.jpg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+}
+.flipcard:nth-child(4) .font-side{
+     border-radius: inherit;
+     background-image: url(../Images/Recover.jpeg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+}
+
+/* form template */
+.form-template{
+     width: 91vw;
+     margin: 1em auto;
+}
+/*  Login button */
+.btn{
+     /* width: 7em;
+     height: fit-content;
+     padding: .4em;
+     margin: 1.5em auto;
+     border: .1em solid black;
+     border-radius: .3em;
+     font-size: 1em;
+     font-weight: 700;
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+     cursor: pointer; */
+}
+.btn:hover{
+     background-color: rgb(19, 212, 19);
+}
+
+/* footer styling */
+footer{
+     width: 100vw;
+     min-width: 800px;
+     height: max-content;
+     background-color: #000000d2;
+     color: #ffffffc5;
+     margin-top: 1em;
+     padding: 2em 1em;
+     position: relative;
+     margin-top: 1vh;
+     bottom: 0;
+}
+footer h3{
+     text-align: center;
+}
+.footer-box{
+     max-width: 50%;
+     margin-inline: auto;
+}
+.footer-items{
+     width: 200px;
+     text-align: center;
+     font-size: 1em;
+     display: block;
+}
+
+
+/* some dynamic class for profile visibility */
+.customer{
+     display: none;
+}
+.admin{
+     display: none;
+}
+.worker{
+     display: none;
+}
+.industry{
+     display: none;
+}

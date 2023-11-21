@@ -1,0 +1,437 @@
+/* display flex properties */
+.flex-center{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* border: 1px solid red; */
+}
+.flex-space-evenly{
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+.flex-space-between{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;    
+}
+.flex{
+     /* border: 1px solid red; */
+     width: 100%;
+     display: flex;
+}
+.justify-content-end{
+     justify-content: end;
+}
+.flex-direction-reverse{
+     flex-direction: row-reverse;
+}
+.flex-d-c{
+     height: fit-content;
+     flex-direction: column;
+}
+.flex-wrap{
+     flex-wrap: wrap;
+}
+.flex-wrap-reverse{
+     flex-wrap: wrap-reverse;
+     /* flex-direction: column; */
+}
+.flex-gap-2em{
+     gap: 2em;
+}
+
+/* impotent for layout */
+.min-width{
+     width: 345px;
+}
+
+/* container for general purpose */
+.container{
+     width: 100%;
+     height: fit-content;
+     margin-inline: auto;
+     box-shadow: 1px 1px 5px 2px #726f6f7a;
+     padding: 3em;
+     border: none;
+     border-radius: .8em;
+}
+.text-justify{
+     text-align: justify;
+}
+
+/* verticaly center */
+.horizantaly-center{
+     width: 100%;
+     height: fit-content;
+     position: relative;
+     display: block;
+     margin-inline: auto ;
+     /* left: 50%;
+     transform: translateX(-50%); */
+}
+
+
+.middle-icon-size{
+     font-size: 2em;
+}
+
+/* element change their place with relative position */
+.relative{
+     position: relative;
+}
+.left{
+     float: left;
+     /* top: 0; */
+}
+.right{
+     float: right;
+}
+.center{
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+}
+
+/* user-select */
+.no-user-select{
+     user-select: none;
+}
+.user-select{
+     user-select: all;
+}
+
+/* btn styling */
+.btn{
+     padding: .4em 2em;
+     width: max-content;
+     border: .1em solid black;
+     border-radius: .3em;
+     font-size: .9em;
+     font-weight: 500;
+     cursor: pointer;
+}
+.btn-sm{
+     font-size: .7em;
+}
+.danger:hover{
+     background-color: rgba(255, 0, 0, 0.856);
+}
+.primary:hover{
+     background-color: rgb(34, 192, 34);
+}
+.no-hover-effect:hover{
+     background-color: #ddddddad;
+}
+.btn:active{
+     transform: scale(1.03);
+}
+.btn-p-3em{
+     padding: .4em 3em;
+}
+.btn-right{
+     position: relative;
+     left: 100%;
+     transform: translateX(-100%);
+}
+
+/* anchor tag simple styling */
+a{
+     color: #000;
+     text-decoration: none;
+}
+
+/* translate properties */
+.top-1em-transfer{
+     transform: translateY(-1em);
+}
+
+/* some class for making HTML dynamically */
+.display{
+     /* position: relative; */
+     display: none;
+}
+
+/* styling for pharagraph */
+.content{
+     margin-top: 2em;
+     word-spacing: 0.1em;
+     z-index: 0;
+}
+.paragraph{
+     margin: 1em auto;
+     text-indent: 5em;
+     line-break: auto;
+     /* algin : justify; */
+     text-align: justify;
+}
+
+/* drop-down concept */
+
+/* bg-imges */
+.bg-img-1{
+     background-image: url("../Images/Plastic-Waste-Management-Rules.jpg");
+}
+
+/* images styling */
+.sm-img{
+     width: 100px;
+}
+.img-block{
+     min-width: 300px;
+     margin-inline: auto;
+     /* border: 1px solid red;   */
+}
+.img-block img{
+     width: 100%;
+}
+.img-block-left{
+     margin-left: 1em;
+}
+
+/* position styling */
+.p-relative{
+     position: relative;
+}
+.p-absolute{
+     position: absolute;
+}
+.right-1em{
+     right: 1em;
+}
+.right{
+     right: 0;
+}
+.left{
+     left: 0;  
+}
+.bottom{
+     bottom: 0;
+}
+     
+
+/* text align */
+.text-center{
+     width: 100%;
+     text-align: center;
+}
+
+/* styling for font size */
+.f-s-0-8em{
+     font-size: .8em;
+}
+.f-s-small{
+     font-size: .9em;
+}
+.f-s-madiam{
+     font-size: 1.1em;
+}
+.f-s-larg{
+     font-size: 1.2em;
+}
+.f-s-1-6em{
+     font-size: 1.6em;
+}
+.f-s-2em{
+     font-size: 2em;
+}
+.f-s-2-5em{
+     font-size: 2.5em;
+}
+.f-s-3em{
+     font-size: 3em;
+}
+
+/* font color styling */
+.f-c-red{
+     color: red;
+}
+.f-c-green{
+     color: green;
+}
+.f-c-yellow{
+     color: yellow;
+}
+
+/* styling for font weight */
+.f-w-400{
+     font-weight: 400;
+}
+.f-w-500{
+     font-weight: 500;
+}
+.f-w-550{
+     font-weight: 550;
+}
+.f-w-600{
+     font-weight: 600;
+}
+.f-w-800{
+     font-weight: 800;
+}
+
+/* font opacity */
+.opacity-0-9{
+     opacity: 0.9;
+}
+.opacity-0-8{
+     opacity: 0.8;
+}
+.opacity-0-7{
+     opacity: 0.7;
+}
+.opacity-0-5{
+     opacity: 0.5;
+}
+/* styling for width and height */
+.w-100px{
+     display: inline-block;
+     width: 100px;
+}
+.w-200px{
+     display: inline-block;
+     width: 200px;
+}
+.w-2em{
+     width: 2em;
+}
+.w-100{
+     width: 100%;
+}
+.w-95{
+     width: 95%;
+}
+.w-90{
+     width: 90%;
+}
+.w-70{
+     width: 70%;
+}
+.w-50{
+     width: 50%;
+}
+.h-fit-content{
+     height: fit-content;
+}
+
+/* styling for display inline or block */
+.display-none{
+     display: none;
+}
+.inline{
+     display: inline;
+}
+.block{
+     display: block;
+}
+.inline-block{
+     display: inline-block;
+}
+
+/* for margin */
+.t-m-3em{
+     margin-top: 3em;
+}
+.t-m-2em{
+     margin-top: 2em;
+}
+.t-m-1-5em{
+     margin-top: 1.5em;
+}
+.t-m-1em{
+     margin-top: 1em;
+}
+.t-m-0-5em{
+     margin-top: .5em;
+}
+.t-m-10px{
+     margin-top: 10px;
+}
+.b-m-2em{
+     margin-bottom: 2em;
+}
+.b-m-1-5em{
+     margin-bottom: 1.5em;
+}
+.b-m-1em{
+     margin-bottom: 1em;
+}
+.b-m-0-5em{
+     margin-bottom: .5em;
+}
+.b-m-10px{
+     margin-bottom: 10px;
+}
+
+.r-m-1em{
+     margin-right: 1em;
+}
+.r-m-2em{
+     margin-right: 2em;
+}
+.r-m-3em{
+     margin-right: 3em;
+}
+
+.l-m-0-5em{
+     margin-left: 0.5em;
+}
+.l-m-1em{
+     margin-left: 1em;
+}
+.l-m-2em{
+     margin-left: 2em;
+}
+.l-m-3em{
+     margin-left: 3em;
+}
+.l-m-6em{
+     margin-left: 6em;
+}
+
+/* vertical margin */
+.v-m-0-5em{
+     margin: 0.5em 0;
+}
+.v-m-1em{
+     margin: 1em 0;
+}
+
+/* margin prpoperies*/
+.m-0-5em{
+     margin: 0.5em;
+}
+.m-1em{
+     margin: 1em;
+}
+.m-1-5em{
+     margin: 1.5em;
+}
+.m-2em{
+     margin: 2em;
+}
+.m-auto{
+     margin: auto;
+}
+
+/* margin-inline */
+.margin-inline{
+     width: 80%;
+     margin-inline: auto;
+}
+
+/* padding styling */
+.p-1em{
+     padding: 1em;
+}
+.b-p-1em{
+     padding-bottom: 1em;
+}
+
+/* text-center */
+.text-center{
+     text-align: center;
+}

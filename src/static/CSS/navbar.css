@@ -1,0 +1,118 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     user-select: none;
+}
+/* body{
+     width: 100vw;
+     height: 100vh;
+     background-color: #ffffff55;
+     font-size: 16px;
+} */
+.header{
+     min-width: 800px;
+     height: 80px;
+     /* width: calc(100% - 20px); */
+     width: 100vw;
+     /* margin: 10px; */
+     margin-inline: auto;
+     background-color: #fff;
+     user-select: none;
+     box-shadow: 0px 0px 2px 2px #ddd;
+     background-color: rgb(178, 230, 250);
+     /* border: 1px solid green; */
+}
+nav{
+     width: 80%;
+     height: 70px;
+     margin-inline: auto;
+
+     /* set inner children in flex */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     /* border: 1px solid red; */
+}
+.logo{
+     width: max-content;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     font-size: 1.7rem;
+     line-height: 70px;
+     cursor: pointer;
+}
+.logo img{
+     width: 70px;
+     display: inline;
+     margin-left: 2rem;
+     margin-right: .7rem;
+}
+/* menu bar control item's */
+ul{
+     width: max-content;
+     height: 100%;
+
+     /* flex space-evently */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-right: 10px;
+}
+li{
+     width: max-content;
+     height: 100%;
+     line-height: 90px;
+     list-style: none;
+     font-size: 1.4rem;
+     color: #000;
+     margin-inline: 1rem;
+     cursor: pointer;
+}
+li a{
+     text-decoration: none;
+     color: #000;
+}
+
+/* drop-down effect */
+.drop-down-menu{
+     position: relative;
+}
+.drop-down-menu:hover .drop-down-menu-items{
+     display: inline;
+}
+.drop-down-menu-items{
+     display: none;
+     position: absolute;
+     top: 70px;
+     left: -50%;
+     width: max-content;
+     height: max-content;
+     /* border: 1px solid green;    */
+}
+.drop-down-items{
+     width: max-content;
+     height: max-content;
+     margin-top: 12px;
+     box-shadow: 0 0 3px 1px #bbb;
+     background-color: #fff;
+     border: none;
+     border-radius: .2rem;
+     z-index: 1;
+}
+.drop-down-menu-items .drop-down-items a{
+     display: block;
+     width: calc(max-content + 2rem);
+     line-height: 1.5rem;
+     font-size: 1.2rem;
+     border-bottom: 0.5px solid #bbb;
+     padding: .7rem;
+     padding-left: .9rem;
+     padding-right: 1.8rem;
+     overflow: hidden;
+}
+.drop-down-items a:hover{
+     background-color: #dddddd55;
+}

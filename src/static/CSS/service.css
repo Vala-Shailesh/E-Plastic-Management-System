@@ -1,0 +1,7 @@
+.empty-item-bg{
+     width: 100vw;
+     height: 100vw;
+     background-image: url(../Images/R.jpg);
+     z-index: 2;
+     /* background-color: red; */
+}

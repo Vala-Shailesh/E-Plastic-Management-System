@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="/CSS/stylesheet.css">
+     <link rel="stylesheet" href="/CSS/mediaQuery.css">
+     <link rel="stylesheet" href="/CSS/commanStyle.css">
+     <link rel="stylesheet" href="/CSS/navbar.css">
+     <link rel="stylesheet" href="/CSS/activity.css">
+     <link rel="stylesheet" href="/CSS/service.css">
+
+      <!-- javascripting  -->
+      <script src="../JavaScript/DynamicJS/addDynamicServiceData.js" defer></script>
+      <script src="/JavaScript/service.js" defer></script>
+
+     <title> E-Plastic Managment System </title>
+</head>
+<body>
+     <div class="header">
+          <nav class="navbar">
+               <div class="logo">
+                    EPMS
+               </div>
+               <ul>
+                    <li> <a href="../home"> Home </a></li>
+                    <li> <a href="../activity"> Activity </a></li>
+                    <li class="drop-down-menu">
+                         Services
+                         <div class="drop-down-menu-items">
+                              <div class="drop-down-items">
+                                   <a href="./currentService"> Current Service </a>
+                                   <a href="./compaletedService"> Compaleted Service </a>
+                                   <a href="./cancelledService"> Cancelled Service </a>
+                              </div>
+                         </div>
+                    </li>
+                    <!-- <li> <a href="#"> Service </a></li> -->
+                    <li> <a href="../content"> Support </a></li>
+                    <li> <a href="../profile"> Profile </a></li>
+               </ul>
+          </nav>
+     </div>
+     <div class="main">
+          <h1 class="text-center"> Old Service </h1>
+          <div class="activity-box">
+               <div class="w-100 f-s-larg f-w-600 activity-items  drop-down">
+                    <span class="f-s-larg"> Accepted Service </span>
+
+                    <input type="text" class="display-none" value="{{noOfData}}" id="numberOfOldData">
+                    <input type="text" class="display-none" value="{{data}}" id="OldData">
+                    <input type="text" class="display-none" value="{{role}}" id="role">
+               </div>
+          </div>
+     </div>
+</body>
+</html>

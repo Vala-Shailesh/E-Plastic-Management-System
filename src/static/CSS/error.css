@@ -1,0 +1,37 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     width: 100vw;
+     height: 100vh;
+     overflow: hidden;
+}
+.main{
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     background-color: #ffffff09;
+}
+.main img{
+     width: 30vw;
+     /* height: 100vh; */
+}
+.content{
+     position: absolute;
+     top: 80%;
+     left: 51%;
+     transform: translate(-50%,-50%);
+     font-size: 1.2em;
+     padding: 1em;
+     /* border: 1px solid black; */
+     text-align: center;
+}
+.content p {
+     font-size: 2em;
+     margin-bottom: .7em;
+}

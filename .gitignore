@@ -1,0 +1,7 @@
+# ignore all files in specific folder folder
+node_modules/
+/src/template/Extra/
+
+# ignore specific file
+/src/functions/mail.doc
+/src/extra/extra.doc 

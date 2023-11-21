@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+     
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="../CSS/stylesheet.css">
+     <link rel="stylesheet" href="../CSS/mediaQuery.css">
+     <link rel="stylesheet" href="../CSS/form.css">
+     <link rel="stylesheet" href="../CSS/commanStyle.css">
+
+     <!-- extra link for rebulit css -->
+     <link rel="stylesheet" href="../CSS/scroll_image.css">
+     <link rel="stylesheet" href="../CSS/navbar.css">
+
+     <!-- Scriptig -->
+     <!-- <script src="../JavaScript/header.js" defer></script> -->
+     <script src="../JavaScript/form.js" defer></script>
+     <script src="../JavaScript/popUpBox.js" defer></script>
+     <script src="../JavaScript/randomCodeGenar.js" defer></script>
+     <script src="../JavaScript/loginValidation.js" defer></script>
+     <script src="../JavaScript/registrationValidation.js" defer></script>
+
+     <title> E-Plastic Managment System </title>
+</head>
+<body>
+      <div class="pop-up-form flex-center display">
+          <div class="pop-up-close-btn">
+               <ion-icon name="close-outline" class="middle-icon-size text-center"></ion-icon>
+          </div>
+          <div class="content">
+               <h1 class="text-center t-m-2em"> EPMS </h1>
+               <img src="../Images/Favicon/epms.png" alt="" class="t-m-1em">
+               {{!-- <span class="t-m-1-5em f-s-larg"> EMPS team is a one type of brige betweet people and industry connect for plastic west control and also team are work for devlope awareness in normal people mind. </span> --}}
+               <div class="f-s-larg pop-up-box-paragraph"> EMPS team is a one type of brige betweet people and industry connect for plastic west control and also team are work for devlope awareness in normal people mind. </div>
+          </div>
+          <form action="/login" method="post" class="pop-up-login-form">
+               <h1> Login </h1>
+               <label for="user-role-login-pop-up">
+                    <select name="role" id="user-role-login-pop-up" required>
+                         <option value="none"> Select a role </option>
+                         {{!-- <option value="admin"> Admin </option> --}}
+                         <option value="customer"> Customer </option>
+                         <option value="worker"> Worker </option>
+                         <option value="industry"> Industry </option>
+                    </select>
+               </label>
+               <label for="loginUserName">
+                    <input type="text" name="loginUserName" id="popUp-login-user-name" value="" placeholder="Enter a user name.." required>
+               </label>
+               <label for="loginPassword">
+                    <input type="password" name="loginPassword" id="popUp-login-password" placeholder="Enter a password.." required>
+               </label>
+               <label for="login-code" class="capcha-code-box">
+                    <input type="text" name="login-code" id="popUp-login-code" placeholder="Enter a code.." class="user-capcha" required>
+                    <ion-icon name="refresh-outline" class="refrence-capcha-code"></ion-icon>
+                    <span class="capcha-code"> </span>
+               </label>
+               <label for="">
+                    <span style="display: none; color : red;" class="invalidCode"> Invalid Code ! </span>
+               </label>
+               <label for="" class="display-none" style="display: {{display}}; color: red;">
+                    <span class="text-center w-100"> invalid password !</span>
+               </label>
+               {{!-- login btn --}}
+               <button type="submit" class="btn horizantaly-center login-btn t-m-1-5em"> Login </button>
+               <label for="forgetPass" class="flex-center t-m-2em">
+                    <span> <a href="/forgetPassword" class="link-hover-effect"> Forget Password ! </a></span>
+               </label>
+               <label for="icon" class="flex-center icon-box">
+                    <div class="icon">
+                         <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+               </label>
+               <label for="option" class="flex-center t-m-2em">
+                    <span> You have account ? <a href="#" id="pop-up-on-login-to-registration" class="link-hover-effect"> Registration Now ! </a></span>
+               </label>
+          </form>
+          <form action="/register" method="post" class="pop-up-registration-form">
+               <h1> Registration </h1>
+               <label for="user-role-registration-pop-up">
+                    <select name="role" id="user-role-registration-pop-up" required>
+                         <option value="none" > Select a role </option>
+                         {{!-- <option value="admin"> Admin </option> --}}
+                         <option value="customer"> Customer </option>
+                         <option value="worker"> Worker </option>
+                         <option value="industry"> Industry </option>
+                    </select>
+               </label>
+               <label for="regisUserName">
+                    <input type="text" name="regisUserName" id="popUp-regis-user-name" placeholder="Enter a user name.." required>
+               </label>
+               <label for="regisUserEmail">
+                    <input type="email" name="regisUserEmail" id="popUp-regis-user-email" placeholder="Enter a user email.." required>
+               </label>
+               <label for="regisUserConnectNo">
+                    <input type="number" name="regisUserConnectNo" minlength="10" maxlength="10" id="popUp-regis-user-connectNo" placeholder="Enter a user number.." required>
+               </label>
+               <label for="regisPassword">
+                    <input type="password" name="regisPassword" id="popUp-regis-password" placeholder="Enter a password.." required>
+               </label>
+               <label for="regisconfirmPassword">
+                    <input type="password" name="regisConfirmPassword" id="popUp-regis-re-password" placeholder="Enter a re-password.." required>
+               </label>
+               <label for="agree">
+                    <input type="checkbox" name="agree" id="popUp-agree" required>
+                    <span> Agree with term's and condition's ! </span>
+               </label>
+               <label for="" class="display-none" style="display: {{res.display}}; color: red;">
+                    <span class="text-center w-100"> Data are not righty filled ! </span>
+               </label>
+               <label for="" class="display-none invalid" style="color: red;">
+                    <span class="text-center w-100"> Data are not righty filled ! </span>
+               </label>
+               {{!-- Registration btn --}}
+               <button type="submit" class="btn horizantaly-center regis-btn"> Register </button>
+               <label for="option" class="flex-center">
+                    <span> If already have account ! <a href="#" id="pop-up-on-registration-to-login" class="link-hover-effect sm-effect"> Login Now ! </a></span>
+               </label>
+               <label for="icon" class="flex-center icon-box">
+                    <div class="icon">
+                         <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div class="icon">
+                         <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+               </label>
+          </form>
+     </div>
+     <div class="visibility">
+          <div class="header">
+               <nav class="navbar">
+                    <div class="logo">
+                         <img src="../Images/epms-removebg-preview.png" alt="ḷogo of EPMS">     
+                         EPMS
+                    </div>
+                    <ul>
+                         <li> <a href="../"> Home </a></li>
+                         <li> <a href="../index/activity"> Activity </a></li>
+                         <li class="pop-up-open-btn"> Login </li>
+                    </ul>
+               </nav>
+          </div>
+          
+          <div class="scroll_images_container">
+               <div class="scroll_images">
+                    <img src="../Images/plastic-recycling.jpg" alt="Plastic west knowlegment's" class="bg_image">
+                    <img src="../Images/plastic_west.jpg" alt="Plastic west knowlegment's" class="bg_image">
+                    <img src="../Images/plastic_west_2.jpg" alt="Plastic west knowlegment's" class="bg_image">
+                    <img src="../Images/Plastic-Waste-Management-Rules.jpg" alt="Plastic west knowlegment's" class="bg_image">
+               </div>
+               <div class="info_container">
+                    <div class="info">
+                         <div class="img">
+                              <img src="../Images/epms-removebg-preview.png" alt="ḷogo of EPMS">
+                         </div>
+                         <h1> E-Plastic Managment System </h1>
+                         <b> Content : </b>
+                         <p> +91 87589 88546 </P>
+                         <b> About : </b> 
+                         <p> Give service about clearning surroding place</p>
+                         {{!-- <button type="button" class="btn horizantaly-center btn-p-3em" class="pop-up-open-btn"> Login </button> --}}
+                    </div>
+               </div>
+               <div class="dot">
+                    <div class="dot_items back_white"></div>
+                    <div class="dot_items"></div>
+                    <div class="dot_items"></div>
+                    <div class="dot_items"></div>
+               </div> 
+          </div>
+          <main class="main">
+               <div class="content">
+                    <h1> About Service </h1>
+                    <div class="about-service paragraph f-s-larg">   
+                         The E-Plastic Management System provides a range of services to effectively tackle the environmental issues associated with electronic plastic waste. It starts with efficient collection mechanisms, ensuring that e-plastics are gathered from various sources such as electronic devices, appliances, and packaging materials. These collected materials then undergo a sorting process to separate different types of e-plastics based on their composition and properties. Once sorted, the e-plastics are directed towards appropriate recycling methods, such as mechanical or chemical processes, to transform them into reusable materials. This promotes resource recovery, reduces the need for new plastic production, and minimizes the amount of e-plastics ending up in landfills or polluting the environment.  
+                    </div>
+               </div>
+               <div class="flex-space-evenly flex-wrap">
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Recycle
+                         </div>
+                         <div class="back-side flipcard-text">
+                              Plastic recycling management involves collection, sorting, cleaning, processing, and transforming plastic waste into new products, promoting
+                         </div>
+                    </div>
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Reduce
+                         </div>
+                         <div class="back-side flipcard-text">
+                              Plastic reduction management entails minimizing the use of single-use plastics, promoting reusable alternatives, implementing plastic bag bans, and encouraging eco-friendly packaging solutions for a sustainable future.
+                         </div>
+                    </div>
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Reuse
+                         </div>
+                         <div class="back-side flipcard-text">
+                              Reusing plastic management focuses on finding creative ways to repurpose and reuse plastic items, such as using plastic bottles as planters or turning plastic bags into durable shopping totes, reducing waste and promoting a circular economy.
+                         </div>
+                    </div>
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Recover
+                         </div>
+                         <div class="back-side flipcard-text">
+                              The most effective way to manage plastic waste is to reduce its consumption in the first place. This can be achieved by promoting the use of alternative materials, encouraging consumers to opt for reusable products, and implementing policies that discourage single-use plastics.
+                         </div>    
+                    </div>
+               </div>
+               <div class="form-template flex-center">
+                    <button type="" class="btn vertical-center t-m-2em btn-p-3em" id="on-login"> Login </button>
+                    <form action="/login" method="post" class="login-form">
+                         <h1> Login </h1>
+                         <label for="user-role-login">
+                              <select name="role" id="user-role-login" required>
+                                   <option value="none"> Select a role </option>
+                                   {{!-- <option value="admin"> Admin </option> --}}
+                                   <option value="customer"> Customer </option>
+                                   <option value="worker"> Worker </option>
+                                   <option value="industry"> Industry </option>
+                              </select>
+                         </label>
+                         <label for="loginUserName">
+                              <!-- <span> User name :: </span> -->
+                              <input type="text" name="loginUserName" id="login-user-name" placeholder="Enter a user name.." required>
+                         </label>
+                         <label for="loginPassword">
+                              <!-- <span> User name :: </span> -->
+                              <input type="password" name="loginPassword" id="login-password" placeholder="Enter a password.." required>
+                         </label>
+                         <label for="login-code" class="capcha-code-box">
+                              <input type="text" name="login-code" id="login-code" placeholder="Enter a code.." class="user-capcha" required>
+                              <ion-icon name="refresh-outline" class="refrence-capcha-code"></ion-icon>
+                              <span class="capcha-code"></span>
+                         </label>
+                         {{!-- login btn --}}
+                         <button type="submit" class="btn horizantaly-center login-btn"> Login </button>
+
+                         <label for="option" class="flex-center">
+                              <span> You have account ? <a href="#" id="on-login-to-registration"  class="link-hover-effect"> Registration Now ! </a></span>
+                         </label>
+                          <label for="forgetPass" class="flex-center t-m-2em">
+                              <span> <a href="/forgetPassword" class="link-hover-effect"> Forget Password ! </a> </span>
+                         </label>
+                         <label for="icon" class="flex-center icon-box t-m-1-5em">
+                              <div class="icon">
+                                   <ion-icon name="logo-google"></ion-icon>
+                              </div>
+                              <div class="icon">
+                                   <ion-icon name="logo-facebook"></ion-icon>
+                              </div>
+                              <div class="icon">
+                                   <ion-icon name="logo-twitter"></ion-icon>
+                              </div>
+                              <div class="icon">
+                                   <ion-icon name="logo-instagram"></ion-icon>
+                              </div>
+                         </label>
+                    </form>
+                    <form action="/register" method="post" class="registration-form">
+                         <h1> Registration </h1>
+                         <label for="user-role-registration">
+                              <select name="role" id="user-role-registration" required>
+                                   <option value="none"> Select a role </option>
+                                   {{!-- <option value="admin"> Admin </option> --}}
+                                   <option value="customer"> Customer </option>
+                                   <option value="worker"> Worker </option>
+                                   <option value="industry"> Industry </option>
+                              </select>
+                         </label>
+                         <label for="regisUserName">
+                              <!-- <span> User name :: </span> -->
+                              <input type="text" name="regisUserName" id="regis-user-name" placeholder="Enter a user name.." required>
+                         </label>
+                         <label for="regisUserEmail">
+                              <!-- <span> User name :: </span> -->
+                              <input type="email" name="regisUserEmail" id="regis-user-email" placeholder="Enter a user email.." required>
+                         </label>
+                         <label for="regisUserConnectNo">
+                              <!-- <span> User name :: </span> -->
+                              <input type="number" name="regisUserConnectNo" maxlength="10" minlength="10" id="regis-user-connectNo" placeholder="Enter a user connect no.." required>
+                         </label>
+                         <label for="regisPassword">
+                              <!-- <span> User name :: </span> -->
+                              <input type="password" name="regisPassword" id="regis-password" placeholder="Enter a password.." required>
+                         </label>
+                         <label for="regisConfirmPassword">
+                              <!-- <span> User name :: </span> -->
+                              <input type="password" name="regisConfirmPassword" id="regis--re-password" placeholder="Enter a re-password.." required>
+                         </label>
+                         <label for="agree">
+                              <input type="checkbox" name="agree" id="agree" required>
+                              <span> Agree with term's and condition's ! </span>
+                         </label>
+                         <button type="submit" class="btn horizantaly-center regis-btn"> Register </button>
+                         <label for="option" class="flex-center">
+                              <span> If already have account !  <a href="#" id="on-registration-to-login" class="link-hover-effect sm-effect"> Login Now ! </a></span>
+                         </label>
+                         <label for="icon" class="flex-center icon-box">
+                              <div class="icon">
+                                   <ion-icon name="logo-google"></ion-icon>
+                              </div>
+                              <div class="icon">
+                                   <ion-icon name="logo-facebook"></ion-icon>
+                              </div>
+                              <div class="icon">
+                                   <ion-icon name="logo-twitter"></ion-icon>
+                              </div>
+                              <div class="icon">
+                                   <ion-icon name="logo-instagram"></ion-icon>
+                              </div>
+                         </label>
+                    </form>
+               </div>
+               <div class="contant">
+                    <h1> Contact  </h1>
+                    <div class="about-service paragraph f-s-larg">
+                         If any queries and issues then content with our team by using below ways 
+                         <br/>
+                         <div class="t-m-2em l-m-1em">
+                              <strong> E-mail : </strong> 
+                              <span> valashailesh111@gmail.com / arpitvb152@gmail.com </span>
+                         </div>
+                         <div class="t-m-1em l-m-1em">
+                              <strong> Contact No : </strong> 
+                              <span> 9408888363 / 9313331835 </span>
+                         </div>
+                    </div>
+               </div>
+               {{!-- <div class="content">
+                    <h1> About Acivity </h1>
+                    <div class="about-service paragraph">   
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aperiam molestiae sit, ex mollitia ad quo similique exercitationem. Facilis odit deserunt ex facere modi! Doloribus neque quibusdam obcaecati magni error sapiente natus ex necessitatibus earum magnam voluptates, asperiores eos voluptate iste voluptatem rerum ducimus non consequatur! Rerum aperiam voluptatum aut?
+                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius consectetur impedit porro voluptate ut reprehenderit! Facilis voluptatem facere eum nobis cum! Sed nesciunt ad, nulla odio, autem, tempore ratione maiores ipsum modi corporis asperiores. Eaque sed assumenda vitae, quaerat quisquam aliquam vero enim similique optio obcaecati iste nostrum cumque nihil, ex beatae recusandae blanditiis necessitatibus aut possimus rerum reiciendis dicta. Aliquid maxime at porro dolore commodi atque sunt repudiandae veritatis! Molestiae, totam beatae cupiditate similique provident placeat dolor inventore delectus at consectetur labore velit quod voluptatibus quisquam minus cumque amet, consequatur possimus magni nisi ducimus, animi fugit adipisci nemo!
+                    </div>
+               </div> --}}
+          </main>
+          <footer>
+               <h3 class="b-m-2em"> EPMS website &copy;copyright rule are apply.</h3>
+               <div class="footer-box flex-space-evenly">
+                    <div class="footer-items"> greekforgreek.con  </div>
+                    <!-- <div class="border"></div> -->
+                    <div class="footer-items"> w3school.com </div>
+                    <div class="footer-items"> w3school.com </div>
+                    <div class="footer-items"> w3school.com </div>
+               </div>
+          </footer>
+     </div>
+     <!-- icon refrenace links -->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- boostrae icon's -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.activity-box{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 2em;
+     margin: 3em 1em;
+}
+.activity-items , .activity-child-item{
+     width: 100%;
+     height: max-content;
+     border-radius: .2em;
+     padding: .6em 1em;
+     cursor: pointer;
+     background-color: #fff;
+     box-shadow: 0px 0px 8px 1px #726f6f7a;
+}
+.activity-child-item{
+     margin: 1em 0em;
+     /* padding: 1em .5e; */
+     box-shadow: 0 0 1px 1px #726f6f7a;
+}
+
+/* background color's */
+.bg-white{
+     background-color: rgb(217, 239, 248);
+     border-radius: 2em;
+}
+
+/* styling about image's */
+.activity-img{
+     min-width: 300px;
+     width: 350px;
+     margin: 2em;
+     border: none;
+     border-radius: 2em;
+     /* border: 1px solid red; */
+     overflow: hidden;
+}
+.activity-img-sm{
+     min-width: 250px;
+     width: 250px;
+}
+.activity-img-larg{
+     min-width: 450px;
+     /* width: 400px; */
+}
+.activity-img-60{
+     min-width: 500px;
+     width: 40%;
+     margin-inline: auto;
+}
+.activity-img img{
+     width: 100%;
+     position: relative;
+     box-shadow: 0 0 4px 2px #0000001f;
+     overflow: hidden;
+}
+.activity-content{
+     width: 70%;
+     min-width: 700px;
+     line-height: 1.8em;
+     font-size: 1.2em;
+     /* word-spacing: max(auto,50px); */
+     /* word-break: keep-all; */
+     text-align: justify;
+     /* padding: 1em; */
+     /* border: 1px solid red; */
+}
+.activity-content-100{
+     width: 100%;
+}
+.box-shadow-none{
+     box-shadow: 0 0 5px 2px #00000020;
+}
+
+/* drop down activity addition */
+
+/* .drop-down-items{
+     display: none;
+     height: 0;
+} */
+
+/* .drop-down:hover .drop-down-items{
+     display: block;
+     height: fit-content;
+     transition: all 4s ease;
+} */

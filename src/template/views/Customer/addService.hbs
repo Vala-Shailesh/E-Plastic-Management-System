@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="/CSS/stylesheet.css">
+     <link rel="stylesheet" href="/CSS/mediaQuery.css">
+     <link rel="stylesheet" href="/CSS/commanStyle.css">
+     <link rel="stylesheet" href="/CSS/navbar.css">
+     <link rel="stylesheet" href="/CSS/activity.css">
+     <link rel="stylesheet" href="/CSS/service.css">
+     <link rel="stylesheet" href="/CSS/profile.css">
+     <link rel="stylesheet" href="/CSS/content.css">
+
+      <!-- javascripting  -->
+      {{!-- <script type="module" src="/JavaScript/randomCodeGenar.js" defer></script> --}}
+      <script type="module" src="/JavaScript/service.js" defer></script>
+
+     <title> E-Plastic Managment System </title>
+</head>
+<body>
+     <div class="header">
+          <nav class="navbar">
+               <div class="logo">
+                    EPMS
+               </div>
+               <ul>
+                    <li> <a href="../home"> Home </a></li>
+                    <li> <a href="../activity"> Activity </a></li>
+                    <li class="drop-down-menu">
+                         Services
+                         <div class="drop-down-menu-items">
+                              <div class="drop-down-items">
+                                   <a href="./addService"> Add Service </a>
+                                   <a href="./currentService"> Current Service </a>
+                                   <a href="./oldService"> Old Service </a>
+                              </div>
+                         </div>
+                    </li>
+                    <!-- <li> <a href="#"> Service </a></li> -->
+                    <li> <a href="../content"> Support </a></li>
+                    <li> <a href="../profile"> Profile </a></li>
+               </ul>
+          </nav>
+     </div>
+     <div class="main">
+          <h1 class="text-center"> Add Service </h1>
+          <div class="content container">
+               <h2 class="f-s-2em"> Instruction </h2>
+               <p class="paragraph f-s-larg"> Any people are want to part to our plastic west managment or find a specific way to clear out regular plastic west control those are add service using fill below form with right deatils. This form are any idea about how many plastic are collect from you and also our team give some rewards for this activity. also follow some instruction mention in below. </p>
+               <p class="paragraph f-s-larg"> 👉 Plastic type and their weight are important team for customer as well as EMPS team that wise do not add rough detail in that fields </p>
+               <p class="paragraph f-s-larg"> 👉 Customer address and their deatils are key point for collect plastic from right person their given current details about your.s </p>
+               {{!-- <h2 class="t-m-2em"> Steps to Add activity </h2>
+               <div class="flex-center flex-gap-2em w-100 t-m-3em">
+                    <h3> Step 1 : </h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus asperiores eveniet assumenda. Sit quo facilis, fuga deserunt rerum at libero similique perferendis.</p>
+               </div>
+               <div class="flex-center flex-gap-2em w-100 t-m-2em">
+                    <h3> Step 2 : </h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus asperiores eveniet assumenda. Sit quo facilis, fuga deserunt rerum at libero similique perferendis.</p>
+               </div> 
+               <div class="flex-center flex-gap-2em w-100 t-m-2em">
+                    <h3> Step 3 : </h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus asperiores eveniet assumenda. Sit quo facilis, fuga deserunt rerum at libero similique perferendis.</p>
+               </div> 
+               <div class="flex-center flex-gap-2em w-100 t-m-2em">
+                    <h3> Step 4 : </h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus asperiores eveniet assumenda. Sit quo facilis, fuga deserunt rerum at libero similique perferendis.</p>
+               </div>
+               <div class="flex-center flex-gap-2em w-100 t-m-2em">
+                    <h3> Step 5 : </h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus asperiores eveniet assumenda. Sit quo facilis, fuga deserunt rerum at libero similique perferendis.</p>
+               </div>
+               <h3 class="t-m-2em b-m-2em text-center"> Follow above process to fill below form or send request for service </h3> --}}
+          </div>
+          <div class="container content">
+               <div class="req-box b-m-2em t-m-3em">
+                    <div class="req-box-item w-50">
+                         <form action="/service/addService" method="post">
+                              <h1 class="t-m-1em"> Request Form </h1>
+                              <div class="t-m-3em">
+                                   <label for="userName"> Full Name : </label>
+                                   <input type="text" class="w-50" name="userName">
+                              </div>
+                              <div class="">
+                                   <label for="workMoblieNo"> Content no : </label>
+                                   <input type="number" pattern="{7-9}[1][0-9]{9}" name="connectNo">
+                              </div>
+                              <div class="">
+                                   <label for="workEmail"> Email : </label>
+                                   <input type="email" name="email">
+                              </div>
+                              <div class="">
+                                   <label for="workAddress"> Work-place Address : </label>
+                                   <input type="text" name="workAddress" id=""/></input>
+                              </div>
+                              <div class=" ">
+                                   <label for="workType"> Work type : </label>
+                                   <select name="workType" id=""> 
+                                        <option value="null"> ----Select type of work--- </option>
+                                        <option value="small shop"> Small Shop </option>
+                                        <option value="normal shop"> Normal Shop </option>
+                                        <option value="big shop"> Big Shop </option>
+                                        <option value="mall"> Mall </option>
+                                        <option value="insititue"> Insititue </option>
+                                        <option value="oragnazation"> Oragnazation </option>
+                                        <option value="other"> Other </option>
+                                   </select>
+                              </div>
+                              <div class="">
+                                   <label for="plasticType"> Accept Plastic type : </label>
+                                   <select name="plasticType" id=""> 
+                                        <option value="null"> ----Select type of plastic---- </option>
+                                        <option value="small shop"> Solid </option>
+                                        <option value="normal shop"> Lique </option>
+                                        <option value="big shop"> Solid & lique </option>
+                                        <option value="mall"> Chemical's </option>
+                                   </select>
+                              </div>
+                              <div class="">
+                                   <label for="plasticWest"> Plastic Weight (in kg)  : </label>
+                                   <input type="number" min="1" pattern="{0-9}[2]" name="plasticWeight"> 
+                              </div>
+                              <div class="">
+                                   <label for="subject"> Subject name : </label>
+                                   <input type="text" name="subjectName"> 
+                              </div>
+                              <div class="">
+                                   <label for="plasticDetail"> Plastic details : </label>
+                                   <textarea name="plasticDetail" id="" cols="30" rows="1"></textarea>
+                              </div>
+                              <div class="w-100 flex-center t-m-3em b-m-2em">
+                                   <button type="submit" class="btn btn-sm r-m-2em"> Send Request </button>
+                                   <button type="reset" class="btn btn-sm r-m-2em danger"> Reset Request </button>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+</body>

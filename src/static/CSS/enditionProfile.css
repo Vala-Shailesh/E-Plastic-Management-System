@@ -1,0 +1,15 @@
+/* some specific stylilng */
+.t-m-3em{
+     margin-top: 3em;
+}
+
+/* shadow effect */
+.shadow-green{
+     box-shadow: 0 0 10px 1px green;
+}
+.shadow-red{
+     box-shadow: 0 0 10px 1px red;
+}
+.shadow-blue{
+     box-shadow: 0 0 10px 1px blue;
+}

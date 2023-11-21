@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+     
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="../CSS/stylesheet.css">
+     <link rel="stylesheet" href="../CSS/mediaQuery.css">
+     <link rel="stylesheet" href="../CSS/navbar.css">
+     <link rel="stylesheet" href="../CSS/form.css">
+     <link rel="stylesheet" href="../CSS/commanStyle.css">
+     <link rel="stylesheet" href="../CSS/scroll_image.css">
+
+     <!-- dynmic javascript -->
+     <script src="../JavaScript/DynamicJS/userControl.js" defer></script>
+
+     <!-- Scriptig -->
+     <script src="../JavaScript/header.js" defer></script>
+     {{!-- <script src="../JavaScript/form.js" defer></script> --}}
+     {{!-- <script src="../JavaScript/popUpBox.js" defer></script> --}}
+
+     <title> E-Plastic Managment System </title>
+</head>
+<body>
+     <div class="visibility">
+          <input type="text" id="control-text" value="{{role}}" style="display: none;">
+
+          {{>navbar}}
+          {{!-- <div class="header">
+               <nav class="navbar">
+                    <div class="logo">
+                              EPMS
+                         </div>
+                         <ul>
+                              <li> <a href="./home.html"> Home </a></li>
+                              <li> <a href="./activity.html"> Activity </a></li>
+                              <li class="drop-down-menu">
+                                   Services
+                                   <div class="drop-down-menu-items">
+                                        <a href="./Customer/addService.html"> Add Service </a>
+                                        <a href="./Customer/currentService.html"> Current Service </a>
+                                        <a href="./Customer/oldService.html"> Old Service </a>
+                                   </div>
+                              </li>
+                              <!-- <li> <a href="#"> Service </a></li> -->
+                              <li> <a href="./content.html"> Contect </a></li>
+                              <li> <a href="./profile.html"> Profile </a></li>
+                         </ul>
+               </nav>
+          </div> --}}
+          <div class="scroll_images_container">
+               <div class="scroll_images">
+                    <img src="../Images/plastic-recycling.jpg" alt="Plastic west knowlegment's" class="bg_image">
+                    <img src="../Images/plastic_west.jpg" alt="Plastic west knowlegment's" class="bg_image">
+                    <img src="../Images/plastic_west_2.jpg" alt="Plastic west knowlegment's" class="bg_image">
+                    <img src="../Images/Plastic-Waste-Management-Rules.jpg" alt="Plastic west knowlegment's" class="bg_image">
+               </div>
+               <div class="info_container">
+                    <div class="info">
+                         <div class="img">
+                              <img src="../Images/epms-removebg-preview.png" alt="ḷogo of EPMS">
+                         </div>
+                         <h1> E-Plastic Managment System </h1>
+                         <b> Content : </b>
+                         <p> +91 87589 88546 </P>
+                         <b> About : </b> 
+                         <p> Give service about clearning surroding place</p>
+                         {{!-- <button type="button" class="btn horizantaly-center btn-p-3em" class="pop-up-open-btn"> Login </button> --}}
+                    </div>
+               </div>
+               <div class="dot">
+                    <div class="dot_items back_white"></div>
+                    <div class="dot_items"></div>
+                    <div class="dot_items"></div>
+                    <div class="dot_items"></div>
+               </div> 
+          </div>
+          <main class="main">
+              <div class="content">
+                    <h1> About Service </h1>
+                    <div class="about-service paragraph f-s-larg">   
+                         The E-Plastic Management System provides a range of services to effectively tackle the environmental issues associated with electronic plastic waste. It starts with efficient collection mechanisms, ensuring that e-plastics are gathered from various sources such as electronic devices, appliances, and packaging materials. These collected materials then undergo a sorting process to separate different types of e-plastics based on their composition and properties. Once sorted, the e-plastics are directed towards appropriate recycling methods, such as mechanical or chemical processes, to transform them into reusable materials. This promotes resource recovery, reduces the need for new plastic production, and minimizes the amount of e-plastics ending up in landfills or polluting the environment.  
+                    </div>
+               </div>
+               <div class="flex-space-evenly flex-wrap">
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Recycle
+                         </div>
+                         <div class="back-side flipcard-text">
+                              Plastic recycling management involves collection, sorting, cleaning, processing, and transforming plastic waste into new products, promoting
+                         </div>
+                    </div>
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Reduce
+                         </div>
+                         <div class="back-side flipcard-text">
+                              Plastic reduction management entails minimizing the use of single-use plastics, promoting reusable alternatives, implementing plastic bag bans, and encouraging eco-friendly packaging solutions for a sustainable future.
+                         </div>
+                    </div>
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Reuse
+                         </div>
+                         <div class="back-side flipcard-text">
+                              Reusing plastic management focuses on finding creative ways to repurpose and reuse plastic items, such as using plastic bottles as planters or turning plastic bags into durable shopping totes, reducing waste and promoting a circular economy.
+                         </div>
+                    </div>
+                    <div class="flipcard">
+                         <div class="font-side flipcard-text">
+                              Recover
+                         </div>
+                         <div class="back-side flipcard-text">
+                              The most effective way to manage plastic waste is to reduce its consumption in the first place. This can be achieved by promoting the use of alternative materials, encouraging consumers to opt for reusable products, and implementing policies that discourage single-use plastics.
+                         </div>    
+                    </div>
+               </div>
+               <div class="content">
+                    <h1> About Acivity </h1>
+                    <div class="about-service paragraph f-s-larg">   
+                         E-Plastic management system is an website project in the project we are used to recycle the waste plastic. It is very helpful in order to overcome the wastage issues of the plastics. The user can able to view the list of plastic categories based on their shapes they can choose any of it. The admin used to maintain all the records Admin also can view the users details add details of product and can also able to update the changes in the details. The management and recycling of E plastic waste is rapidly growing as it is a valuable resource of industries and it is very substances and with low recycling rate.The massive consumption of a wide range plastic products has generated a huge amount of plastic waste. There is a need to provide awareness of their uses and routine management as a part of our lifestyle. Nowadays, plastics are increasingly being used in our daily life activities, including the packaging in different food and brewing companies, cosmetics, pharmaceutical, and other production sectors.</div>
+               </div>
+                <div class="contant t-m-2em">
+                    <h1> Contact  </h1>
+                    <div class="about-service paragraph f-s-larg">
+                         If any queries and issues then content with our team by using below ways 
+                         <br/>
+                         <div class="t-m-2em l-m-1em">
+                              <strong> E-mail : </strong> 
+                              <span> valashailesh111@gmail.com / arpitvb152@gmail.com </span>
+                         </div>
+                         <div class="t-m-1em l-m-1em">
+                              <strong> Contact No : </strong> 
+                              <span> 9408888363 / 9313331835 </span>
+                         </div>
+                    </div>
+               </div>
+          </main>
+          {{> footer}}
+          {{!-- <footer>
+               <h3> EPMS website &copy;copyright rule are apply.</h3>
+               <div class="box footer-box">
+                    <div class="footer-items"> greekforgreek.con  </div>
+                    <!-- <div class="border"></div> -->
+                    <div class="footer-items"> w3school.com </div>
+                    <div class="footer-items"> w3school.com </div>
+                    <div class="footer-items"> w3school.com </div>
+               </div>
+          </footer> --}}
+     </div>
+     <!-- icon refrenace links -->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- boostrae icon's -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>
+              

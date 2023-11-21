@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- favicon  -->
+     <link rel="shortcut icon" href="../Images/Favicon/android-chrome-192x192.png" type="image/x-icon">
+
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="../CSS/stylesheet.css">
+     <link rel="stylesheet" href="../CSS/navbar.css">
+     <link rel="stylesheet" href="../CSS/mediaQuery.css">
+     <link rel="stylesheet" href="../CSS/commanStyle.css">
+     <link rel="stylesheet" href="../CSS/profile.css">
+     <link rel="stylesheet" href="../CSS/profileMediaQuery.css">
+     <link rel="stylesheet" href="../CSS/enditionProfile.css">
+     
+     <!-- javasecipt -->
+     <script src="../JavaScript/profile.js" defer></script>
+     <script src="../JavaScript/DynamicJS/userControl.js" defer></script>
+
+     <title>  E-Plastic Managment System  </title>
+</head>
+<body>
+     <input type="text" id="control-text" value="{{role}}" style="display: none;">
+
+     {{> navbar}}
+     {{!-- <div class="header">
+          <nav class="navbar">
+               <div class="logo">
+                    EPMS
+               </div>
+               <ul>
+                    <li> <a href="./home.html"> Home </a></li>
+                    <li> <a href="./activity.html"> Activity </a></li>
+                    <li class="drop-down-menu">
+                         Services
+                         <div class="drop-down-menu-items">
+                              <a href="./Customer/addService.html"> Add Service </a>
+                              <a href="./Customer/currentService.html"> Current Service </a>
+                              <a href="./Customer/oldService.html"> Old Service </a>
+                         </div>
+                    </li>
+                    <!-- <li> <a href="#"> Service </a></li> -->
+                    <li> <a href="./content.html"> Contect </a></li>
+                    <li> <a href="./profile.html"> Profile </a></li>
+               </ul>
+          </nav>
+     </div> --}}
+     <div class="main">
+          <!-- <h1 class="text-center t-m-1em b-m-1em"> Profile are ready to  processing </h1> -->
+          <div class="profile-container">
+               <!-- <div class="block opacity-0-7"> Service </div>  -->
+               <div class="">
+                    <div class="profile-btn-layout flex-space-evenly">
+                              <button class="btn no-hover-effect r-m-2em" id="profile-enable"> Enable </button>
+                              <button class="btn invisiable" id="profile-disable"> Disable </button>
+                              <div class="min-width"></div>
+                              <button class="btn invisiable"> <a href="/forgetPassword"> Password Reset </a> </button>
+                              <div>
+                                   <form action="/logout" method="post">
+                                        <input type="hidden" name="email" value="{{user.email}}" style="display : none;">
+                                        <button class="btn danger l-m-2em"> Log-out </button>
+                                   </form>
+                              </div>
+                    </div>
+               </div>
+               <div class="profile-img-border">
+                    <div class="profile-box-effect">
+                         <div class="profile-img">
+                              <img src="../Images/profile-defult-image.png" alt="Profile Image">
+                              <div class="p-absolute center">
+                                   <input type="file" class="p-absolute center"  required>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="profile-box">
+                    <div class="profile-box-item b-m-1em">
+                         <h1 class="t-m-0-5em l-m-1em  f-w-550"> Profile </h1>
+                         <form action="/profile" method="post" class="t-m-1-5em b-m-2em" name="profileForm">
+                              <h2 class="f-w-500"> User Details </h2>
+                              <div class="t-m-3em">
+                                   <label for="role"> Role as : </label>
+                                        <input type="text" value="{{role}}" class="extra-input">
+                                        <select name="role" id="" class="display-none input" required>
+                                             <option value="none"> Select a role </option>
+                                             <option value="admin"> Admin </option>
+                                             <option value="customer"> Customer </option>
+                                             <option value="worker"> Worker </option>
+                                             <option value="industry"> Industry </option>
+                                        </select>
+                              </div>
+                              <div class="">
+                                   <label for="userName"> Full Name : </label>
+                                   <input type="text" name="userName" value="{{user.name}}" class="input" required>
+                              </div>
+                              <div for="userGender">
+                                   <label for="userGender"> Gender :  </label>
+                                   <input type="text" value="{{user.gender}}" class="extra-input" readonly>
+                                   <div>
+                                        <label for="g-male" class="fit-content" >
+                                             <input type="radio" name="userGender" id="g-male" class="l-m-1em input" value="male"> Male
+                                        </label>
+                                        <label for="g-female" class="fit-content">
+                                             <input type="radio" name="userGender" id="g-female" class="l-m-1em input" value="female"> Female
+                                        </label>
+                                   </div>
+                              </div>
+                              <div>
+                                   <label for="userEmail"> Email : </label>
+                                   <input type="email" name="userEmail" value="{{user.email}}" class="input" required> 
+                              </div>
+                              {{!-- <div>
+                                   <label for="userEmail2"> Email : </label>
+                                   <input type="email" value="{{user.email}}">
+                              </div> --}}
+                              <div>
+                                   <label for="userConnectNo"> Content no : </label>
+                                   <input type="number" name="userConnectNo" pattern="[7-9]{1}[0-9]{9}" value="{{user.connectNo}}" class="input" required>
+                              </div>
+                              {{!-- <div>
+                                   <label for="userMobileNo2"> Content no : </label>
+                                   <input type="number" minlength="10" maxlength="10" value="{{user.connectNo}}">
+                              </div> --}}
+                              <div>
+                                   <label for="userAddress"> Home Address : </label>
+                                   <input type="text" name="userAddress" id="" value="{{user.address}}" class="input" />
+                              </div>
+                              <!-- <div for="userAddress2">
+                                   <label> Workspace Address : </label>
+                                   <textarea name="userAddress2" id="" cols="30" rows="1">
+                                   </textarea>
+                              </div> -->
+                              <hr class="m-1-5em w-100 form-enable" />
+
+                              <!-- for user as a customoer only  -->
+                              <h2 class="f-w-500 t-m-1em user"> Professinal Details </h2>
+                              <div class="t-m-3em customer">
+                                   <label for="workType"> Work type : </label>
+
+                                   <!-- extra input field -->
+                                   <input type="text" value="{{user.workType}}" class="extra-input">
+                                   <select name="workType" id="" class="input"> 
+                                        <option value="null"> Select type of work </option>
+                                        <option value="small shop"> Small Shop </option>
+                                        <option value="normal shop"> Normal Shop </option>
+                                        <option value="big shop"> Big Shop </option>
+                                        <option value="mall"> Mall </option>
+                                        <option value="insititue"> Insititue </option>
+                                        <option value="oragnazation"> Oragnazation </option>
+                                        <option value="other"> Other </option>
+                                   </select>
+                              </div>
+                              <div class="customer">
+                                   <label for="workDetails"> Work details : </label>
+                                   <input type="text" name="workDetails" id="" cols="30" rows="1" class="input" value="{{user.workDetails}}"/>
+                              </div>
+                              <div class="customer">
+                                   <label for="workConnectNo"> Content no : </label>
+                                   <input type="number" name="workConnectNo" pattern="{7-9}[1][0-9]{9}" class="input" value="{{user.workConnectNo}}">
+                              </div>
+                              <div class="customer">
+                                   <label for="workEmail"> Email : </label>
+                                   <input type="email" class="input" name="workEmail" value="{{user.workEmail}}">
+                              </div>
+                              <div class="customer">
+                                   <label for="workAddress"> Work-place Address : </label>
+                                   <input type="text" name="workAddress" id="" class="input" value="{{user.workAddress}}" /></input>
+                              </div>
+                              <div class="customer">
+                                   <label for="plasticType"> Plastic type : </label><!-- extra input field -->
+                                   <input type="text" value="{{user.plasticType}}" class="extra-input">
+                                   <select name="plasticType" id="" class="input"> 
+                                        <option value="null"> Select type of plastic </option>
+                                        <option value="small shop"> Solid </option>
+                                        <option value="normal shop"> Lique </option>
+                                        <option value="big shop"> Solid & lique </option>
+                                        <option value="mall"> Chemical's </option>
+                                   </select>
+                              </div>
+                              <div class="customer">
+                                   <label for="plasticWest"> Plastic West (in kg per day ) : </label>
+                                   <input type="number" name="plasticWest" class="input" value="{{user.plasticWest}}"> 
+                              </div>
+
+                              <!-- only for worker  -->
+
+                              <div class="worker">
+                                   <label for=""> Worker Department : </label>
+                                   <!-- extra input field -->
+                                   <input type="text" value="{{user.workDepartment}}" class="extra-input">
+                                   <select name="workerDepartment" id="" class="input"> 
+                                        <option value="null"> Select Department for working </option>
+                                        <option value="mangment"> Mangment </option>
+                                        <option value="communicationChain"> Communication chain </option>
+                                        <option value="collectorPlastic"> Collector plastic </option>
+                                        <option value="driver"> Driver </option>
+                                        <option value="mall">  </option>
+                                   </select>
+                              </div>
+                              <div class="worker">
+                                   <label for=""> Eduction : </label>
+                                   <!-- extra input field -->
+                                   <input type="text" value="{{user.workerEducation}}" class="extra-input">
+                                   <select name="workerEducation" id="" class="input"> 
+                                        <option value="null"> Select Course or degree </option>
+                                        <option value="Becalor"> Becalor </option>
+                                        <option value="hsc"> HSC </option>
+                                        <option value="ssc"> SSC </option>
+                                        <option value="other"> other </option>
+                                   </select>
+                              </div>
+                              <div class="worker">
+                                   <label for="experience"> Experience </label>
+                                   <input type="number" name="workerExperience" id="" class="input">
+                              </div>
+                              <div class="worker">
+                                   <label for="salary"> Salary :  </label>
+                                   <input type="number" name="salary" id="" class="input"> 
+                              </div>
+                              <div class="worker">
+                                   <label for="oldJob"> Old Job Brief : </label>
+                                   <input type="text" name="oldJob" id="" class="input">
+                              </div>
+                              
+                              <!-- only for industry -->
+
+                              <div class="industry">
+                                   <label for="industryName"> Industry Name : </label>
+                                   <input type="text" name="industryName" id="" class="input">
+                              </div>
+                              <div class="industry">
+                                   <label for="industryEmail"> Email : </label>
+                                   <input type="email" name="industryEmail" class="input">
+                              </div>
+                              <div class="industry">
+                                   <label for="industryMoblieNo"> Contect No : </label>
+                                   <input type="number" name="industryMoblieNo" id="" class="input">
+                              </div>
+                              <div class="industry">
+                                   <label for="industryPlasticType"> Accept Plastic type : </label>
+                                   <!-- extra input field -->
+                                   <input type="text" value="{{user.industryPlasticType}}" class="extra-input">
+                                   <select name="industryPlasticType" id="" class="input"> 
+                                        <option value="null"> Select type of plastic </option>
+                                        <option value="small shop"> Solid </option>
+                                        <option value="normal shop"> Lique </option>
+                                        <option value="big shop"> Solid & lique </option>
+                                        <option value="mall"> Chemical's </option>
+                                   </select>
+                              </div>
+                              <div class="industry">
+                                   <label for="industryAccepedPlastic"> Max Accepting Plastic ( in kg ) : </label>
+                                   <input type="number" name="industryAccepedPlastic" class="input">
+                              </div>
+
+                              <div class="w-100 flex-center t-m-3em">
+                                   <button type="submit" class="btn btn-sm r-m-2em" id="profile-sumbit-btn"> Sumbit </button>
+                                   <button type="reset" class="btn btn-sm danger"> Reset </button>
+                              </div>
+                         </form>
+                         
+                    </div>
+               </div>
+          </div>
+          <div class="profile-container t-m-3em">
+               <div class="profile-box">
+                    <div class="profile-box-item">
+                         <h1 class="f-w-550"> Working chart </h1>
+                         <div class="flex-space-evenly t-m-2em b-m-2em  flex-gap-5em profile-content"> 
+                              <div class="user-identity-box flex-space-evenly flex-wrap flex-gap-2em t-m-1-5em">
+                                   <div class="user-identity-box-item flex-center flex-d-c shadow-blue auto-set">
+                                        <div class="f-s-2-5em"> 1 </div>
+                                        <div class="block f-s-larg"> Current Service </div> 
+                                   </div>
+                                   <div class="user-identity-box-item flex-center flex-d-c shadow-red auto-set">
+                                        <div class="f-s-2-5em"> 2 </div>
+                                        <div class="block f-s-larg"> Cancelled Service </div> 
+                                   </div>
+                                   <div class="user-identity-box-item flex-center flex-d-c shadow-green auto-set">
+                                        <div class="f-s-2-5em"> 1 </div>
+                                        <div class="block f-s-larg"> Accepted Service </div> 
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="profile-container t-m-3em">
+               <div class="profile-box">
+                    <div class="profile-box-item">
+                         <h1 class="f-w-550"> Rewards </h1>
+                         <div class="flex-space-evenly t-m-2em b-m-2em  flex-gap-5em profile-content"> 
+                              <div class="reword-img m-1-5em">
+                                   <img src="/Images/R.jpg" alt="reword icon">
+                              </div>
+                              <div class="margin-inline">
+                                   <div class="f-s-3em text-center b-m-1em"> 10 </div>
+                                   <p class="f-s-larg w-90 margin-inline"> You will be eligible to get gift card from EPMS team when you reach 1000 rewards points.</p>
+                                   <div class="w-100 flex-center t-m-3em">
+                                        <button type="submit" class="btn btn-sm r-m-2em"> Send </button>
+                                        <button type="reset" class="btn btn-sm danger"> Spend </button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     {{> footer}}
+     {{!-- <footer>
+          <h3> EPMS website &copy;copyright rule are apply.</h3>
+          <div class="box footer-box">
+               <div class="footer-items"> greekforgreek.con  </div>
+               <div class="footer-items"> w3school.com </div>
+               <div class="footer-items"> w3school.com </div>
+               <div class="footer-items"> w3school.com </div>
+          </div>
+     </footer> --}}
+     <!-- <div class="border"></div> -->
+</body>
+</html>

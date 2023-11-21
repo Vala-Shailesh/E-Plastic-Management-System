@@ -1,0 +1,219 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+form{
+     width: 25%;
+     min-width: 500px;
+     height: 600px;
+     margin-inline: auto;
+     margin: 3em auto;
+     padding: 1em auto;
+     border-radius: .4em;
+     border: 1px solid black;
+     /* box-shadow: 0px 0px 10px 5px #00000048; */
+     backdrop-filter: blur(3px);
+     user-select: none;
+}
+form h1{
+     margin: 1em auto 2em;
+     text-align: center;
+}
+form label{
+     width: 80%;
+     margin: 1em auto;
+     display: block;
+}
+form label input, form label select{
+     width: 100%;
+     padding: .5em .8em; 
+     border: none;
+     border-bottom: 1px solid black;
+     /* border-radius: .5em; */
+     background-color: transparent;
+     color: #000;
+}
+input::placeholder{
+     color: #000;
+}
+form label input[type="checkbox"]{
+     width: fit-content;
+     margin-inline: .4em;
+}
+input:focus, select:focus{
+     outline: none
+}
+.login-btn, .regis-btn{
+     width: max-content;    
+     margin: .5em 0 0 ;
+}
+.regis-btn{
+     width: max-content;
+}
+form label .option{
+     width: 100%;
+     margin-inline: 4.5em;
+}
+
+/* link hover effect's  */
+.link-hover-effect{
+     margin-inline: .2em;
+}
+.link-hover-effect.sm-effect{
+     margin-inline: .07em;
+}
+.link-hover-effect:hover{
+     margin-inline: 0;
+     font-weight: 800;
+     text-decoration: underline;
+}
+
+/* registration form */
+.registration-form{
+     height: 590px;
+}
+
+/* additional style sheet for form */
+.login-form, .registration-form{
+     transform: scale(0);
+     display: none;
+     transition: transform 1s ease;
+}
+
+/* pop-up with login form */
+.pop-up-form{
+     max-width: fit-content;
+     height: 600px;
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     border-radius: .2em;
+     background-color: #fff;
+     box-shadow: 0px 0px 10px 5px #00000048;
+     padding: 0 0 0 1em ;
+     pointer-events: stroke;
+     overflow: hidden;
+     opacity: 1;
+     display: none;
+     z-index: 5;
+}
+.pop-up-form .pop-up-login-form, 
+.pop-up-form .pop-up-registration-form{
+     width: 450px;
+     height: 600px;
+     display: block;
+     /* transform: scale(0); */
+     backdrop-filter: blur(10px);
+     border: none;
+     box-shadow: 1px 1px 4px 2px #00000048;
+}
+.pop-up-form > .pop-up-registration-form{
+     display: none;
+}
+.pop-up-form .content{
+     display: block;
+     width: 200px;
+     height: 100%;   
+     margin: 1em;
+}
+.pop-up-form .content img{
+     width: 150px;
+     margin-inline: auto;
+     display: block;
+}
+.pop-up-form .content span{
+     display: block;
+     width: 100%;
+     text-indent: 1em;
+     letter-spacing: auto;
+     word-wrap: none;
+     line-break: anywhere;
+}
+
+/* pop-up close btn styling */
+.pop-up-close-btn{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 2.2em;
+     height: 2.2em;
+     z-index: 3;
+     cursor: pointer;
+     background-color: #00000096;
+     color: #fff;
+     line-height: 2.2em;
+     /* border: 1px solid red; */
+     border-bottom-left-radius: .8em;
+}
+
+/* popUp box paragraph content styling */
+.pop-up-box-paragraph{
+     text-indent: 2rem;
+     font-size: 1.2rem;
+     margin: 1.4rem 0;
+     text-align: justify;
+}
+
+/* icon inside form styling */
+.icon-box{
+     gap: 1em;
+}
+.icon-box .icon{
+     width: 1.4em;
+     height: 1.4em;
+     border: none;
+     border-radius: 50%;
+     background-color: red;
+     margin-top: .3em;
+     font-size: 1.7em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+}
+.icon:nth-child(1){
+     background-image: linear-gradient(orange,purple);
+     /* -webkit-background-clip: text; */
+     /* color: transparent; */
+}
+.icon:nth-child(2){
+     background-color: rgb(10, 10, 138);
+     color: white;
+}
+.icon:nth-child(3){
+     background-color: rgb(36,36, 207);
+     color: white;
+}
+.icon:nth-child(4){
+     background-image: linear-gradient(blue,violet,purple);
+     color: white;
+     font-weight: 800;
+}
+
+/* capcha code sylilng */
+.capcha-code-box input{
+    width: calc(69% - 2px);
+    margin-right: 1em;
+}
+.capcha-code-box span{   
+     display: inline-block;
+     width: 80px;
+     background-color: #999;
+     color: #fff;
+     text-align: center;
+     padding: .4em .7em;
+     border: none;
+     border-radius: .25em;
+}
+.capcha-code-box .refrence-capcha-code {
+     /* background-color: #000; */
+     position: relative;
+     top: 5px;
+     width: 1em;
+     /* height: 80%; */
+     /* border: 1px solid black; */
+     font-size: 1.4em;
+     cursor: pointer;
+}
